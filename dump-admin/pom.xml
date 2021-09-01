@@ -23,6 +23,7 @@
     <slf4j.version>1.7.12</slf4j.version>
     <log4j.version>1.2.17</log4j.version>
     <druid.version>1.2.4</druid.version>
+    <freemarker.version>2.3.23</freemarker.version>
   </properties>
 
   <dependencies>
@@ -106,6 +107,18 @@
       <groupId>org.mybatis</groupId>
       <artifactId>mybatis-spring</artifactId>
       <version>2.0.6</version>
+    </dependency>
+    <!--framework -->
+    <dependency>
+      <groupId>org.freemarker</groupId>
+      <artifactId>freemarker</artifactId>
+      <version>${freemarker.version}</version>
+    </dependency>
+    <!--lombok插件-->
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <version>1.16.20</version>
     </dependency>
     <!-- log -->
     <dependency>
