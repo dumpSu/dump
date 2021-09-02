@@ -27,7 +27,7 @@
     </bean>
 
 
-     freemarker config
+    <!-- freemarker config -->
     <bean id="freemarkerConfig" class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
         <property name="templateLoaderPath" value="/WEB-INF/html/"/>
     </bean>
