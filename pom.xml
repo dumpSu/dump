@@ -10,18 +10,19 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>dump-admin</module>
+        <module>dump-log</module>
     </modules>
     <!--父依赖-->
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
+
         <srping.version>5.2.16.RELEASE</srping.version>
         <mysql.version>8.0.20</mysql.version>
         <mybatis.version>3.5.6</mybatis.version>
-        <slf4j.version>1.7.12</slf4j.version>
-        <log4j.version>1.2.17</log4j.version>
         <druid.version>1.2.4</druid.version>
+        <lombok.version>1.16.20</lombok.version>
         <freemarker.version>2.3.23</freemarker.version>
     </properties>
     <dependencies>
@@ -88,7 +89,7 @@
             <artifactId>spring-webmvc</artifactId>
             <version>${srping.version}</version>
         </dependency>
-        <!-- spring框架包 -->
+        <!-- spring框架包 包括springmvc-->
         <!-- 数据库驱动 -->
         <dependency>
             <groupId>mysql</groupId>
@@ -106,33 +107,12 @@
             <artifactId>mybatis-spring</artifactId>
             <version>2.0.6</version>
         </dependency>
-        <!--framework -->
-        <dependency>
-            <groupId>org.freemarker</groupId>
-            <artifactId>freemarker</artifactId>
-            <version>${freemarker.version}</version>
-        </dependency>
+
         <!--lombok插件-->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.16.20</version>
-        </dependency>
-        <!-- log -->
-        <dependency>
-            <groupId>log4j</groupId>
-            <artifactId>log4j</artifactId>
-            <version>${log4j.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>${slf4j.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-log4j12</artifactId>
-            <version>${slf4j.version}</version>
+            <version>${lombok.version}</version>
         </dependency>
         <!-- 连接池 -->
         <dependency>

@@ -9,40 +9,48 @@
         <artifactId>dump</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-    <!--子模块标识-->
-    <artifactId>dump-admin</artifactId>
+
+    <artifactId>dump-log</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
-    <description>admin 模块</description>
-    <name>dump-admin Maven Webapp</name>
+    <description>log 模块</description>
+    <name>dump-log Maven Webapp</name>
+   
     <url>http://www.example.com</url>
 
     <properties>
-        <freemarker.version>2.3.23</freemarker.version>
+      <slf4j.version>1.7.12</slf4j.version>
+      <log4j.version>1.2.17</log4j.version>
     </properties>
+
     <dependencies>
-        <!--添加自定义日志依赖-->
+        <!-- 添加log依赖 -->
         <dependency>
-            <groupId>work.dumpSu</groupId>
-            <artifactId>dump-log</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>${log4j.version}</version>
         </dependency>
-        <!--framework -->
         <dependency>
-            <groupId>org.freemarker</groupId>
-            <artifactId>freemarker</artifactId>
-            <version>${freemarker.version}</version>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>${slf4j.version}</version>
         </dependency>
     </dependencies>
+
     <build>
-        <finalName>dump-admin</finalName>
-        <pluginManagement>
+        <finalName>dump-log</finalName>
+        <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
             <plugins>
                 <plugin>
                     <artifactId>maven-clean-plugin</artifactId>
                     <version>3.1.0</version>
                 </plugin>
-
+                <!-- see http://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_war_packaging -->
                 <plugin>
                     <artifactId>maven-resources-plugin</artifactId>
                     <version>3.0.2</version>
