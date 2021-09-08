@@ -15,7 +15,7 @@
     <packaging>war</packaging>
     <description>log 模块</description>
     <name>dump-log Maven Webapp</name>
-   
+
     <url>http://www.example.com</url>
 
     <properties>
