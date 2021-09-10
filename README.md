@@ -1,6 +1,6 @@
 # dump
 dump仓库
-#腾讯云服务器配置
+# 腾讯云服务器配置
 jdk1.8安装路径:/usr/java
 mysql8.0.26安装路名:/usr/mysql
 # dump-log
