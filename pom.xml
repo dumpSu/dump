@@ -90,6 +90,12 @@
             <version>${srping.version}</version>
         </dependency>
         <!-- spring框架包 包括springmvc-->
+        <!--framework -->
+        <dependency>
+            <groupId>org.freemarker</groupId>
+            <artifactId>freemarker</artifactId>
+            <version>${freemarker.version}</version>
+        </dependency>
         <!-- 数据库驱动 -->
         <dependency>
             <groupId>mysql</groupId>

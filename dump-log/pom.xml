@@ -19,10 +19,14 @@
     <url>http://www.example.com</url>
 
     <properties>
-      <slf4j.version>1.7.12</slf4j.version>
-      <log4j.version>1.2.17</log4j.version>
+        <slf4j.version>1.7.12</slf4j.version>
+        <log4j.version>1.2.17</log4j.version>
     </properties>
-
+    <!--
+    slf4j-api：全程Simple Logging Facade For Java，为Java提供的简单日志Facade。Facade门面就是接口，它允许用户以自己的喜好，在项目中通过slf4j接入不同的日志系统。更直观一点，slf4j是个数据线，一端嵌入程序，另一端链接日志系统，从而实现将程序中的信息导入到日志系统并记录。
+    slf4j-log4j12：链接slf4j-api和log4j的适配器。
+    log4j：具体的日志系统。通过slf4j-log4j12初始化log4j，达到最终日志的输出。
+    -->
     <dependencies>
         <!-- 添加log依赖 -->
         <dependency>
